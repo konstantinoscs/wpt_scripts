@@ -51,7 +51,7 @@ do
     sleep 1
 done
 echo "## sudo DEBIAN_FRONTEND=noninteractive apt -yq done"
-sudo apt -y install git screen watchdog curl wget apt-transport-https xserver-xorg-video-dummy
+sudo DEBIAN_FRONTEND=noninteractive apt -y install git screen watchdog curl wget apt-transport-https xserver-xorg-video-dummy
 echo "## sudo apt -y install git screen watchdog curl wget apt-transport-https xserver-xorg-video-dummy done"
 until git clone --branch=release https://github.com/WPO-Foundation/wptagent.git
 do
